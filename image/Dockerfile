@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Phusion <info@phusion.nl>
+LABEL maintainer="luk.zim91@gmail.com"
 
 COPY . /bd_build
 
