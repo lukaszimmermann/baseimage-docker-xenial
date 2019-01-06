@@ -1,4 +1,4 @@
-NAME = phusion/baseimage
+NAME = lukaszimmermann/phusion-baseimage-xenial
 VERSION = 0.10.2
 
 .PHONY: all build test tag_latest release ssh
@@ -6,7 +6,7 @@ VERSION = 0.10.2
 all: build
 
 build:
-	docker build -t $(NAME):$(VERSION) --rm image
+	docker build --no-cache --pull -t $(NAME):$(VERSION) --rm image
 
 test:
 	env NAME=$(NAME) VERSION=$(VERSION) ./test/runner.sh
